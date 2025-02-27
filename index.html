@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adham | Red Team Ops</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="glitch" data-text="ADHAM PWNZ">ADHAM PWNZ</h1>
+        <p class="tagline">Red Team | Exploitation | Cyberpunk Ops</p>
+        <div class="buttons">
+            <a href="#" class="btn">Exploits</a>
+            <a href="#" class="btn">Projects</a>
+            <a href="#" class="btn">Contact</a>
+        </div>
+        <div class="console">
+            <p>> Initializing Red Teaming Mode...</p>
+            <p>> Loading Exploits...</p>
+            <p>> Status: <span class="status">ACTIVE</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #000;
+    color: #0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.glitch {
+    font-size: 60px;
+    font-weight: 700;
+    color: #0f0;
+    text-shadow: 0 0 5px #0f0, 0 0 10px #f00, 0 0 15px #00f;
+    animation: glitch 1s infinite linear;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+.tagline {
+    font-size: 18px;
+    color: #ff0000;
+    text-shadow: 0 0 5px #f00;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    color: #0f0;
+    border: 2px solid #0f0;
+    text-decoration: none;
+    font-size: 18px;
+    box-shadow: 0 0 10px #0f0;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0f0;
+    color: #000;
+    box-shadow: 0 0 20px #0f0;
+}
+
+.console {
+    margin-top: 20px;
+    text-align: left;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border: 1px solid #0f0;
+    width: 300px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.status {
+    color: red;
+    font-weight: bold;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('%c Red Team Mode Activated! ', 'color: red; font-size: 20px;');
+    let consoleBox = document.querySelector('.console');
+    setTimeout(() => { consoleBox.innerHTML += '<p>> Breaching Firewalls...</p>'; }, 2000);
+    setTimeout(() => { consoleBox.innerHTML += '<p>> Access Granted!</p>'; }, 4000);
+});
+</script>
