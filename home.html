@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to 0xRo0t blog website</title>
+    <title>0xRo0t - Home</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -12,42 +12,108 @@
             font-family: 'Orbitron', sans-serif;
             text-align: center;
             margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .container {
-            position: relative;
         }
 
         .glitch {
-            font-size: 4rem;
+            font-size: 3rem;
             font-weight: bold;
-            position: relative;
             text-transform: uppercase;
             animation: glitch 1s infinite;
         }
 
         @keyframes glitch {
             0% { text-shadow: 3px 0 red, -3px 0 black; }
-            25% { text-shadow: -3px 0 red, 3px 0 black; }
-            50% { text-shadow: 3px 0 red, -3px 0 black; }
-            75% { text-shadow: -3px 0 red, 3px 0 black; }
+            50% { text-shadow: -3px 0 red, 3px 0 black; }
             100% { text-shadow: 3px 0 red, -3px 0 black; }
         }
 
-        .subtitle {
-            font-size: 1.5rem;
-            opacity: 0.8;
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: red;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: white;
+        }
+
+        .section {
+            padding: 40px 20px;
+        }
+
+        article {
+            background: rgba(255, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px auto;
+            width: 60%;
+            border-radius: 8px;
+        }
+
+        article a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        article a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="noise"></div>
+    <header>
         <h1 class="glitch">0xRo0t</h1>
-        <p class="subtitle">Welcome to the cyber world</p>
-    </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>Welcome to the cyber world. I am 0xRo0t, Penster specializing in  web and Network penetration testing and cybersecurity. Here, you'll find my insights, research, and latest projects.</p>
+    </section>
+    
+    <section id="blogs" class="section">
+        <h2>Latest Blogs</h2>
+        <article>
+            <h3>How to Use Nmap</h3>
+            <p>Learn how to scan networks and uncover vulnerabilities using Nmap.</p>
+            <a href="#">Read More</a>
+        </article>
+        <article>
+            <h3>How to Hack WiFi</h3>
+            <p>A deep dive into wireless security and ethical hacking techniques.</p>
+            <a href="#">Read More</a>
+        </article>
+        <article>
+            <h3>TryHackMe Writeup</h3>
+            <p>Step-by-step walkthrough of a TryHackMe challenge.</p>
+            <a href="#">Read More</a>
+        </article>
+    </section>
+    
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <p>Follow me on social media or reach out via email.</p>
+        <ul>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Email</a></li>
+        </ul>
+    </section>
 </body>
 </html>
