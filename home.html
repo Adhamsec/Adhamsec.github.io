@@ -6,12 +6,16 @@
     <title>0xRo0t - Home</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
         body {
-            background-color: black;
-            color: red;
+            background-color: #0d0d0d;
+            color: #ff073a;
             font-family: 'Orbitron', sans-serif;
             text-align: center;
             margin: 0;
+            padding: 0;
+            overflow-x: hidden;
         }
 
         .glitch {
@@ -22,9 +26,9 @@
         }
 
         @keyframes glitch {
-            0% { text-shadow: 3px 0 red, -3px 0 black; }
-            50% { text-shadow: -3px 0 red, 3px 0 black; }
-            100% { text-shadow: 3px 0 red, -3px 0 black; }
+            0% { text-shadow: 3px 0 #ff073a, -3px 0 black; }
+            50% { text-shadow: -3px 0 #ff073a, 3px 0 black; }
+            100% { text-shadow: 3px 0 #ff073a, -3px 0 black; }
         }
 
         nav ul {
@@ -32,34 +36,37 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 15px;
         }
 
         nav ul li a {
-            color: red;
+            color: #ff073a;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1rem;
             transition: color 0.3s;
         }
 
         nav ul li a:hover {
-            color: white;
+            color: cyan;
         }
 
         .section {
-            padding: 40px 20px;
+            padding: 20px;
+            margin: auto;
         }
 
         article {
-            background: rgba(255, 0, 0, 0.1);
-            padding: 20px;
+            background: rgba(255, 7, 58, 0.1);
+            padding: 15px;
             margin: 10px auto;
-            width: 60%;
+            width: 90%;
+            max-width: 400px;
             border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 7, 58, 0.6);
         }
 
         article a {
-            color: white;
+            color: cyan;
             text-decoration: none;
             font-weight: bold;
         }
@@ -67,10 +74,24 @@
         article a:hover {
             text-decoration: underline;
         }
+
+        @media screen and (max-width: 600px) {
+            .glitch {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            article {
+                width: 95%;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="noise"></div>
     <header>
         <h1 class="glitch">0xRo0t</h1>
         <nav>
@@ -84,7 +105,7 @@
     
     <section id="about" class="section">
         <h2>About Me</h2>
-        <p>Welcome to the cyber world. I am 0xRo0t, Penster specializing in  web and Network penetration testing and cybersecurity. Here, you'll find my insights, research, and latest projects.</p>
+        <p>Welcome to the cyber world. I am 0xRo0t, a cybersecurity enthusiast and penetration tester. I specialize in offensive security, web and network penetration testing, and exploit development. My goal is to explore vulnerabilities, push the boundaries of ethical hacking, and share knowledge with the community.</p>
     </section>
     
     <section id="blogs" class="section">
