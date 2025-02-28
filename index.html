@@ -3,29 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hacking Blog</title>
+    <title>Welcome to 0xRo0t blog website</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .glitch {
+            font-size: 4rem;
+            font-weight: bold;
+            position: relative;
+            text-transform: uppercase;
+            animation: glitch 1s infinite;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: 3px 0 red, -3px 0 black; }
+            25% { text-shadow: -3px 0 red, 3px 0 black; }
+            50% { text-shadow: 3px 0 red, -3px 0 black; }
+            75% { text-shadow: -3px 0 red, 3px 0 black; }
+            100% { text-shadow: 3px 0 red, -3px 0 black; }
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.8;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1 class="glitch" data-text="Hacking Blog">Hacking Blog</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="blogs.html">Blogs</a></li>
-                <li><a href="writeups.html">Write-Ups</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home">
-            <h2>Welcome to the Hacking Blog</h2>
-            <p>Your source for the latest in hacking news, tutorials, and write-ups.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Hacking Blog. All rights reserved.</p>
-    </footer>
+    <div class="container">
+        <h1 class="glitch">CYBER GLITCH</h1>
+        <p class="subtitle">Welcome to the Future</p>
+    </div>
 </body>
 </html>
