@@ -1,0 +1,62 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ff0000;
+    padding: 20px;
+    text-align: center;
+}
+
+h1.glitch {
+    position: relative;
+    color: #ff0000;
+    font-size: 3em;
+    text-shadow: 2px 0 #000, 0 2px #000, -2px 0 #000, 0 -2px #000;
+    animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+    0% { text-shadow: 2px 0 #000, -2px 0 #000; }
+    20% { text-shadow: 2px 0 #000, -2px 0 #000; }
+    40% { text-shadow: 2px 0 #000, -2px 0 #000; }
+    60% { text-shadow: 2px 0 #000, -2px 0 #000; }
+    80% { text-shadow: 2px 0 #000, -2px 0 #000; }
+    100% { text-shadow: 2px 0 #000, -2px 0 #000; }
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin: 20px 0;
+}
+
+footer {
+    background-color: #ff0000;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
